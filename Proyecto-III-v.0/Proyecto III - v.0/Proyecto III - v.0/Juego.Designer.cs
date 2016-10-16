@@ -33,6 +33,9 @@
             this.tableLayoutPanel_AliadoFacil = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_AliadoMedio = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel_AliadoDificil = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel_EnemigoFacil = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel_EnemigoMedio = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel_EnemigoDificil = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
             // label1
@@ -142,11 +145,101 @@
             this.tableLayoutPanel_AliadoDificil.Size = new System.Drawing.Size(320, 320);
             this.tableLayoutPanel_AliadoDificil.TabIndex = 4;
             // 
+            // tableLayoutPanel_EnemigoFacil
+            // 
+            this.tableLayoutPanel_EnemigoFacil.ColumnCount = 5;
+            this.tableLayoutPanel_EnemigoFacil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.Location = new System.Drawing.Point(538, 104);
+            this.tableLayoutPanel_EnemigoFacil.Name = "tableLayoutPanel_EnemigoFacil";
+            this.tableLayoutPanel_EnemigoFacil.RowCount = 5;
+            this.tableLayoutPanel_EnemigoFacil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel_EnemigoFacil.Size = new System.Drawing.Size(320, 320);
+            this.tableLayoutPanel_EnemigoFacil.TabIndex = 5;
+            // 
+            // tableLayoutPanel_EnemigoMedio
+            // 
+            this.tableLayoutPanel_EnemigoMedio.ColumnCount = 10;
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.Location = new System.Drawing.Point(538, 104);
+            this.tableLayoutPanel_EnemigoMedio.Name = "tableLayoutPanel_EnemigoMedio";
+            this.tableLayoutPanel_EnemigoMedio.RowCount = 10;
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel_EnemigoMedio.Size = new System.Drawing.Size(320, 320);
+            this.tableLayoutPanel_EnemigoMedio.TabIndex = 6;
+            // 
+            // tableLayoutPanel_EnemigoDificil
+            // 
+            this.tableLayoutPanel_EnemigoDificil.ColumnCount = 15;
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.Location = new System.Drawing.Point(538, 104);
+            this.tableLayoutPanel_EnemigoDificil.Name = "tableLayoutPanel_EnemigoDificil";
+            this.tableLayoutPanel_EnemigoDificil.RowCount = 15;
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.666667F));
+            this.tableLayoutPanel_EnemigoDificil.Size = new System.Drawing.Size(320, 320);
+            this.tableLayoutPanel_EnemigoDificil.TabIndex = 7;
+            // 
             // Juego
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(889, 445);
+            this.Controls.Add(this.tableLayoutPanel_EnemigoDificil);
+            this.Controls.Add(this.tableLayoutPanel_EnemigoMedio);
+            this.Controls.Add(this.tableLayoutPanel_EnemigoFacil);
             this.Controls.Add(this.tableLayoutPanel_AliadoDificil);
             this.Controls.Add(this.tableLayoutPanel_AliadoMedio);
             this.Controls.Add(this.tableLayoutPanel_AliadoFacil);
@@ -167,5 +260,8 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_AliadoFacil;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_AliadoMedio;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_AliadoDificil;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_EnemigoFacil;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_EnemigoMedio;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel_EnemigoDificil;
     }
 }

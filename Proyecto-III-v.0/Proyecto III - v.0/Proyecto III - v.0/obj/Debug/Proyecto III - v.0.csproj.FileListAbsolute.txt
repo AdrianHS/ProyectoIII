@@ -11,3 +11,6 @@ C:\Users\AndrewJ\Desktop\Bases de datos 2\Proyecto III - v.0\Proyecto III - v.0\
 C:\Users\ADRIAN\Desktop\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\bin\Debug\Proyecto III - v.0.exe.config
 C:\Users\ADRIAN\Desktop\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.exe
 C:\Users\ADRIAN\Desktop\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.pdb
+C:\Source\ProyectoIII\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\bin\Debug\Proyecto III - v.0.exe.config
+C:\Source\ProyectoIII\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.exe
+C:\Source\ProyectoIII\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.pdb
