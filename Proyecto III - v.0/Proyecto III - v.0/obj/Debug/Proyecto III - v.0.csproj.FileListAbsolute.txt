@@ -14,3 +14,13 @@ C:\Users\ADRIAN\Desktop\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\o
 C:\Source\ProyectoIII\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\bin\Debug\Proyecto III - v.0.exe.config
 C:\Source\ProyectoIII\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.exe
 C:\Source\ProyectoIII\Proyecto-III-v.0\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.pdb
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\bin\Debug\Proyecto III - v.0.exe.config
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.exe
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.pdb
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\bin\Debug\Proyecto III - v.0.exe
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\bin\Debug\Proyecto III - v.0.pdb
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.csprojResolveAssemblyReference.cache
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto_III___v._0.Juego.resources
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto_III___v._0.Form1.resources
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto_III___v._0.Properties.Resources.resources
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.csproj.GenerateResource.Cache
