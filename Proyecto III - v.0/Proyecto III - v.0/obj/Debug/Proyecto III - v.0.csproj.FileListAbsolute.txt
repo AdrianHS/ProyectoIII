@@ -21,6 +21,7 @@ C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\bin\D
 C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\bin\Debug\Proyecto III - v.0.pdb
 C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.csprojResolveAssemblyReference.cache
 C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto_III___v._0.Juego.resources
-C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto_III___v._0.Form1.resources
 C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto_III___v._0.Properties.Resources.resources
 C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto III - v.0.csproj.GenerateResource.Cache
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto_III___v._0.Inicio.resources
+C:\Users\AndrewJ\Desktop\ProyectoIII\Proyecto III - v.0\Proyecto III - v.0\obj\Debug\Proyecto_III___v._0.MenuPrincipal.resources

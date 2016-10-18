@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_III___v._0
 {
-    partial class Form1
+    partial class MenuPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,52 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxDificultad = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.comboBox_Dificultad = new System.Windows.Forms.ComboBox();
+            this.label_Jugador = new System.Windows.Forms.Label();
+            this.button_Jugar = new System.Windows.Forms.Button();
+            this.label_Dificultad = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.prueba = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBoxDificultad
+            // comboBox_Dificultad
             // 
-            this.comboBoxDificultad.FormattingEnabled = true;
-            this.comboBoxDificultad.Items.AddRange(new object[] {
+            this.comboBox_Dificultad.FormattingEnabled = true;
+            this.comboBox_Dificultad.Items.AddRange(new object[] {
             "Facil",
             "Medio",
             "Dificil"});
-            this.comboBoxDificultad.Location = new System.Drawing.Point(82, 132);
-            this.comboBoxDificultad.Name = "comboBoxDificultad";
-            this.comboBoxDificultad.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxDificultad.TabIndex = 0;
+            this.comboBox_Dificultad.Location = new System.Drawing.Point(82, 132);
+            this.comboBox_Dificultad.Name = "comboBox_Dificultad";
+            this.comboBox_Dificultad.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_Dificultad.TabIndex = 0;
             // 
-            // label1
+            // label_Jugador
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Jugador #";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label_Jugador.AutoSize = true;
+            this.label_Jugador.Location = new System.Drawing.Point(117, 72);
+            this.label_Jugador.Name = "label_Jugador";
+            this.label_Jugador.Size = new System.Drawing.Size(55, 13);
+            this.label_Jugador.TabIndex = 1;
+            this.label_Jugador.Text = "Jugador #";
+            this.label_Jugador.Click += new System.EventHandler(this.label1_Click);
             // 
-            // button1
+            // button_Jugar
             // 
-            this.button1.Location = new System.Drawing.Point(101, 194);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Jugar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_Jugar.Location = new System.Drawing.Point(101, 194);
+            this.button_Jugar.Name = "button_Jugar";
+            this.button_Jugar.Size = new System.Drawing.Size(75, 23);
+            this.button_Jugar.TabIndex = 2;
+            this.button_Jugar.Text = "Jugar";
+            this.button_Jugar.UseVisualStyleBackColor = true;
+            this.button_Jugar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label2
+            // label_Dificultad
             // 
-            this.label2.Location = new System.Drawing.Point(118, 113);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Dificultad:";
+            this.label_Dificultad.Location = new System.Drawing.Point(56, 113);
+            this.label_Dificultad.Name = "label_Dificultad";
+            this.label_Dificultad.Size = new System.Drawing.Size(187, 16);
+            this.label_Dificultad.TabIndex = 0;
+            this.label_Dificultad.Text = "Dificultad:";
+            this.label_Dificultad.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label3
             // 
@@ -84,18 +86,29 @@
             this.label3.Size = new System.Drawing.Size(251, 32);
             this.label3.TabIndex = 3;
             this.label3.Text = "Batalla Naval";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // Form1
+            // prueba
+            // 
+            this.prueba.AutoSize = true;
+            this.prueba.Location = new System.Drawing.Point(129, 236);
+            this.prueba.Name = "prueba";
+            this.prueba.Size = new System.Drawing.Size(35, 13);
+            this.prueba.TabIndex = 4;
+            this.prueba.Text = "label1";
+            // 
+            // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 261);
+            this.Controls.Add(this.prueba);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxDificultad);
-            this.Name = "Form1";
+            this.Controls.Add(this.label_Dificultad);
+            this.Controls.Add(this.button_Jugar);
+            this.Controls.Add(this.label_Jugador);
+            this.Controls.Add(this.comboBox_Dificultad);
+            this.Name = "MenuPrincipal";
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -105,11 +118,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBoxDificultad;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox comboBox_Dificultad;
+        private System.Windows.Forms.Label label_Jugador;
+        private System.Windows.Forms.Button button_Jugar;
+        private System.Windows.Forms.Label label_Dificultad;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label prueba;
     }
 }
 
