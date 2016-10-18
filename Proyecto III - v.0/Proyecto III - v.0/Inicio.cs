@@ -29,7 +29,7 @@ namespace Proyecto_III___v._0
             MenuPrincipal menu = new MenuPrincipal(2);
             menu.Show();
             //this.Close();
-            MenuPrincipal.
+            
         }
 
     }
