@@ -47,6 +47,8 @@
             this.comboBox_Dificultad.Name = "comboBox_Dificultad";
             this.comboBox_Dificultad.Size = new System.Drawing.Size(121, 21);
             this.comboBox_Dificultad.TabIndex = 0;
+            this.comboBox_Dificultad.Text = "Facil";
+            this.comboBox_Dificultad.SelectedIndexChanged += new System.EventHandler(this.comboBox_Dificultad_SelectedIndexChanged);
             // 
             // label_Jugador
             // 
@@ -91,11 +93,12 @@
             // prueba
             // 
             this.prueba.AutoSize = true;
-            this.prueba.Location = new System.Drawing.Point(129, 236);
+            this.prueba.Location = new System.Drawing.Point(131, 239);
             this.prueba.Name = "prueba";
             this.prueba.Size = new System.Drawing.Size(35, 13);
             this.prueba.TabIndex = 4;
             this.prueba.Text = "label1";
+            this.prueba.Click += new System.EventHandler(this.prueba_Click);
             // 
             // MenuPrincipal
             // 

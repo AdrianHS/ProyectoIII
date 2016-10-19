@@ -22,7 +22,7 @@ namespace Server
             try
             {
                 //Conectarse
-                servidor = new TcpListener(IPAddress.Parse("192.168.0.100"),5050);
+                servidor = new TcpListener(IPAddress.Parse("127.0.0.1"),5050);
                 cliente = new Hashtable();
 
                 servidor.Start();
@@ -34,7 +34,7 @@ namespace Server
                 while (true)
                 {
                     TcpClient cliente2 = servidor.AcceptTcpClient();
-                    Byte[] msjEnByte = new Byte[2];
+                    Byte[] msjEnByte = new Byte[2048];
 
                     NetworkStream networkCliente = cliente2.GetStream();
                     networkCliente.Read(msjEnByte, 0, msjEnByte.Length);
@@ -77,7 +77,7 @@ namespace Server
                 TcpClient clienteConectado = (TcpClient) c.Value;
                 NetworkStream stringg = clienteConectado.GetStream();
 
-                uno = Encoding.ASCII.GetBytes(Nombre + " : " + Mensaje);
+                uno = Encoding.ASCII.GetBytes(/*Nombre + " : " +*/ Mensaje);
                 Console.WriteLine(Nombre + " : " + Mensaje);
 
                 stringg.Write(uno, 0, uno.Length);
@@ -107,7 +107,7 @@ namespace Server
             {
                 //TcpClient cliente2 = clienteClase.AcceptTcpClient();
 
-                Byte[] msjEnByte = new Byte[2];
+                Byte[] msjEnByte = new Byte[2048];
 
 
                 NetworkStream networkCliente = clienteClase.GetStream();

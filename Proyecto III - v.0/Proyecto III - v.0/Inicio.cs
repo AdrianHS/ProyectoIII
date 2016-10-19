@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Proyecto_III___v._0
 {
     public partial class Inicio : Form
     {
+     
+
         public Inicio()
         {
             InitializeComponent();
@@ -19,18 +22,26 @@ namespace Proyecto_III___v._0
 
         private void button_Crear_Click(object sender, EventArgs e)
         {
+            //conectar("1");
             MenuPrincipal menu = new MenuPrincipal(1);
             menu.Show();
-            //this.Close();
+            this.Hide();
         }
 
         private void button_Unirse_Click(object sender, EventArgs e)
         {
+            //conectar("2");
             MenuPrincipal menu = new MenuPrincipal(2);
             menu.Show();
-            //this.Close();
+            this.Hide();
             
         }
 
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+ 
     }
 }
