@@ -93,7 +93,7 @@
             // prueba
             // 
             this.prueba.AutoSize = true;
-            this.prueba.Location = new System.Drawing.Point(131, 239);
+            this.prueba.Location = new System.Drawing.Point(127, 239);
             this.prueba.Name = "prueba";
             this.prueba.Size = new System.Drawing.Size(35, 13);
             this.prueba.TabIndex = 4;

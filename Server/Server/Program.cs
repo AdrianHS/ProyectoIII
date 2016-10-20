@@ -34,7 +34,7 @@ namespace Server
                 while (true)
                 {
                     TcpClient cliente2 = servidor.AcceptTcpClient();
-                    Byte[] msjEnByte = new Byte[2048];
+                    Byte[] msjEnByte = new Byte[20];
 
                     NetworkStream networkCliente = cliente2.GetStream();
                     networkCliente.Read(msjEnByte, 0, msjEnByte.Length);
@@ -107,7 +107,7 @@ namespace Server
             {
                 //TcpClient cliente2 = clienteClase.AcceptTcpClient();
 
-                Byte[] msjEnByte = new Byte[2048];
+                Byte[] msjEnByte = new Byte[20];
 
 
                 NetworkStream networkCliente = clienteClase.GetStream();

@@ -17,9 +17,9 @@ namespace Proyecto_III___v._0
     public partial class MenuPrincipal : Form
     {
 
-        TcpClient Cliente;
+        TcpClient cliente;
         NetworkStream StreamCliente;
-        String mensaje;
+        static string mensaje;
         static int jug = 0;
         
 
@@ -33,15 +33,31 @@ namespace Proyecto_III___v._0
             {
                 label_Dificultad.Text = "Jugador uno eligiendo dificultad";
                 comboBox_Dificultad.Enabled = false;
-                conectar("2");
+                Conecciones.conectar("2");
                 //enviar("Jugador 2 conectado");
-                enviar("habilitar1");
+                Conecciones.enviar("habilitar1");
             }
             else
             {
-                conectar("1");
+                Conecciones.conectar("1");
+
             }
+            Thread hilo = new Thread(recivirMensaje1);
+            //CheckForIllegalCrossThreadCalls = false;
+            hilo.Start();
             
+
+        }
+
+        private void recivirMensaje1()
+        {
+            while (true)
+            {
+                mensaje = Conecciones.recivirMensaje();
+                
+                comandos();
+                Console.WriteLine(mensaje);
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -71,9 +87,9 @@ namespace Proyecto_III___v._0
 
 
 
-                enviar("habilitar2");
+                Conecciones.enviar("habilitar2");
 
-                enviar(dificultad+"");
+                Conecciones.enviar(dificultad+"");
 
 
                 
@@ -100,85 +116,19 @@ namespace Proyecto_III___v._0
 
         }
 
-        //Conectar con el server
-        private void conectar(string jug)
-        {
-            try
-            {
-                Cliente = new TcpClient("127.0.0.1", 5050);
-                StreamCliente = Cliente.GetStream();
-                byte[] data = Encoding.ASCII.GetBytes(jug);
-                StreamCliente.Write(data, 0, data.Length);
-                StreamCliente.Flush();
-                mensaje = "Conectado con el Servidor";
-                //MensajeRecivido();
-                //constantemente reciviendo
-                Thread hilo = new Thread(recivirMensaje);
-                hilo.Start();
-            }
-            catch
-            {
-                MessageBox.Show("Error al conectar");
-            }
-        }
-
-
         //escribe en el label
-        public void MensajeRecivido()
+        public void comandos()
         {
-            if (InvokeRequired)
-                Invoke(new MethodInvoker(MensajeRecivido));
-            else
+            Console.WriteLine("Entró con la variable: "+ mensaje +".");
+            //Habilita el boton del jugador 1
+            if (mensaje == "habilitar1" && jug == 1)
             {
-                //Pone msj de prueba
-                if (mensaje != "")
-                {
-                    prueba.Text = mensaje;
-                }
-                
-                //Habilita el boton del jugador 1
-                if (prueba.Text == "habilitar1" && jug == 1)
-                {
-                    button_Jugar.Enabled = true;
-                }
-                //Habilita el boton del jugador 2
-                if (prueba.Text == "habilitar2" && jug == 2)
-                {
-                    button_Jugar.Enabled = true;
-                }
-
-
-
-
+                button_Jugar.Enabled = true;
             }
-
-        }
-        //recive mensajes
-        public void recivirMensaje()
-        {
-            while (true)
+            //Habilita el boton del jugador 2
+            if (mensaje == "habilitar2" && jug == 2)
             {
-                StreamCliente = Cliente.GetStream();
-                byte[] bite = new byte[2048];
-                StreamCliente.Read(bite, 0, bite.Length);
-                mensaje = Encoding.ASCII.GetString(bite);
-                MensajeRecivido();
-            }
-        }
-
-        //envia mensajes
-        public void enviar(string men)
-        {
-            try
-            {
-                StreamCliente = Cliente.GetStream();
-                byte[] data = Encoding.ASCII.GetBytes(men);
-                StreamCliente.Write(data, 0, data.Length);
-                StreamCliente.Flush();
-            }
-            catch
-            {
-                MessageBox.Show("No se envio el mensaje");
+                button_Jugar.Enabled = true;
             }
         }
 

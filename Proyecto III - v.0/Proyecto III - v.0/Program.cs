@@ -18,5 +18,8 @@ namespace Proyecto_III___v._0
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Inicio());
         }
+
+
+
     }
 }
