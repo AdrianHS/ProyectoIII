@@ -49,11 +49,7 @@ namespace Server
 
                     //ciclo infinito
                     chatear nuevo = new chatear(mensajeCliente, cliente2);
-
-
-
                 }
-
             }
 
             catch 
@@ -78,7 +74,7 @@ namespace Server
                 NetworkStream stringg = clienteConectado.GetStream();
 
                 uno = Encoding.ASCII.GetBytes(/*Nombre + " : " +*/ Mensaje);
-                Console.WriteLine(Nombre + " : " + Mensaje);
+                Console.WriteLine("Jugador: " +Nombre + ": Envió: " + Mensaje);
 
                 stringg.Write(uno, 0, uno.Length);
                 stringg.Flush();

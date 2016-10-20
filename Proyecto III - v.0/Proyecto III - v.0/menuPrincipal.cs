@@ -16,12 +16,9 @@ namespace Proyecto_III___v._0
 {
     public partial class MenuPrincipal : Form
     {
-
-        TcpClient cliente;
-        NetworkStream StreamCliente;
         static string mensaje;
         static int jug = 0;
-        
+        Thread hilo;
 
         public MenuPrincipal(int jugador)
         {
@@ -34,17 +31,21 @@ namespace Proyecto_III___v._0
                 label_Dificultad.Text = "Jugador uno eligiendo dificultad";
                 comboBox_Dificultad.Enabled = false;
                 Conecciones.conectar("2");
-                //enviar("Jugador 2 conectado");
+
+                hilo = new Thread(recivirMensaje1);
+                CheckForIllegalCrossThreadCalls = false;
+                hilo.Start();
                 Conecciones.enviar("habilitar1");
             }
             else
             {
                 Conecciones.conectar("1");
+                hilo = new Thread(recivirMensaje1);
+                CheckForIllegalCrossThreadCalls = false;
+                hilo.Start();
 
             }
-            Thread hilo = new Thread(recivirMensaje1);
-            //CheckForIllegalCrossThreadCalls = false;
-            hilo.Start();
+
             
 
         }
@@ -54,9 +55,9 @@ namespace Proyecto_III___v._0
             while (true)
             {
                 mensaje = Conecciones.recivirMensaje();
-                
+                Console.WriteLine("Uno: "+mensaje);
                 comandos();
-                Console.WriteLine(mensaje);
+                Console.WriteLine("Dos: "+mensaje);
             }
         }
 
@@ -91,25 +92,20 @@ namespace Proyecto_III___v._0
 
                 Conecciones.enviar(dificultad+"");
 
-
-                
-                
-
-
                 Juego juego = new Juego(dificultad);
                 juego.Show();
-                //this.Hide();
+                hilo.Abort();
+                this.Hide();
+                
 
             }
             else
             {
                 Juego juego = new Juego(Int32.Parse(prueba.Text));
                 juego.Show();
-                //this.Hide();
-                /*
-                button_Jugar.Enabled = false;
-                label_Dificultad.Text = "En espera del jugador 1...";
-                */
+                hilo.Abort();
+                this.Hide();
+
             }
 
 
@@ -119,17 +115,20 @@ namespace Proyecto_III___v._0
         //escribe en el label
         public void comandos()
         {
-            Console.WriteLine("Entró con la variable: "+ mensaje +".");
+            prueba.Text = mensaje;
             //Habilita el boton del jugador 1
-            if (mensaje == "habilitar1" && jug == 1)
+            if (prueba.Text == "habilitar1" && jug == 1)
             {
                 button_Jugar.Enabled = true;
             }
             //Habilita el boton del jugador 2
-            if (mensaje == "habilitar2" && jug == 2)
+            else if (prueba.Text == "habilitar2" && jug == 2)
             {
                 button_Jugar.Enabled = true;
             }
+
+
+            Console.WriteLine("Entró con la variable: " + mensaje);
         }
 
         private void label3_Click(object sender, EventArgs e)

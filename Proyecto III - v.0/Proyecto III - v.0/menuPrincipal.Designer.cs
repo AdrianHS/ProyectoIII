@@ -93,9 +93,10 @@
             // prueba
             // 
             this.prueba.AutoSize = true;
-            this.prueba.Location = new System.Drawing.Point(127, 239);
+            this.prueba.Font = new System.Drawing.Font("Bradley Hand ITC", 2.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prueba.Location = new System.Drawing.Point(26, 41);
             this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(35, 13);
+            this.prueba.Size = new System.Drawing.Size(9, 4);
             this.prueba.TabIndex = 4;
             this.prueba.Text = "label1";
             this.prueba.Click += new System.EventHandler(this.prueba_Click);
@@ -105,8 +106,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(298, 261);
-            this.Controls.Add(this.prueba);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.prueba);
             this.Controls.Add(this.label_Dificultad);
             this.Controls.Add(this.button_Jugar);
             this.Controls.Add(this.label_Jugador);

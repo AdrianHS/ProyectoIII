@@ -18,8 +18,6 @@ namespace Proyecto_III___v._0
 
         public static void conectar(string jug)
         {
-
-
             try
             {
                 cliente = new TcpClient("127.0.0.1", 5050);
@@ -42,8 +40,7 @@ namespace Proyecto_III___v._0
 
         //recive mensajes
         public static string recivirMensaje()
-        {
-          
+        {    
             StreamCliente = cliente.GetStream();
             byte[] bite = new byte[20];
             StreamCliente.Read(bite, 0, bite.Length);
