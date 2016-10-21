@@ -22,7 +22,7 @@ namespace Proyecto_III___v._0
 
         private void button_Crear_Click(object sender, EventArgs e)
         {
-            //conectar("1");
+            Conexiones.conectar("1");
             MenuPrincipal menu = new MenuPrincipal(1);
             menu.Show();
             this.Hide();
@@ -30,7 +30,7 @@ namespace Proyecto_III___v._0
 
         private void button_Unirse_Click(object sender, EventArgs e)
         {
-            //conectar("2");
+            Conexiones.conectar("2");
             MenuPrincipal menu = new MenuPrincipal(2);
             menu.Show();
             this.Hide();

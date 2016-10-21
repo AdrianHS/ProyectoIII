@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SwiPlCs, Version=1.1.60605.0, Culture=neutral, PublicKeyToken=03ea137181587c56, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\SwiPlCs.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conecciones.cs" />
+    <Compile Include="Conexiones.cs" />
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>

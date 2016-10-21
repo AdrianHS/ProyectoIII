@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace Proyecto_III___v._0
 {
-    class Conecciones
+    class Conexiones
     {
         static TcpClient cliente;
         static NetworkStream StreamCliente;

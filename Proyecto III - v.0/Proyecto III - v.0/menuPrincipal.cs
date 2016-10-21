@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-
+using SbsSW.SwiPlCs;
 
 namespace Proyecto_III___v._0
 {
@@ -20,6 +20,7 @@ namespace Proyecto_III___v._0
         static int jug = 0;
         Thread hilo;
 
+        //Recibe al jugador y lo conecta al server sugun si numero
         public MenuPrincipal(int jugador)
         {
             InitializeComponent();
@@ -30,16 +31,14 @@ namespace Proyecto_III___v._0
             {
                 label_Dificultad.Text = "Jugador uno eligiendo dificultad";
                 comboBox_Dificultad.Enabled = false;
-                Conecciones.conectar("2");
-
+                
                 hilo = new Thread(recivirMensaje1);
                 CheckForIllegalCrossThreadCalls = false;
                 hilo.Start();
-                Conecciones.enviar("habilitar1");
+                Conexiones.enviar("habilitar1");
             }
             else
             {
-                Conecciones.conectar("1");
                 hilo = new Thread(recivirMensaje1);
                 CheckForIllegalCrossThreadCalls = false;
                 hilo.Start();
@@ -50,69 +49,7 @@ namespace Proyecto_III___v._0
 
         }
 
-        private void recivirMensaje1()
-        {
-            while (true)
-            {
-                mensaje = Conecciones.recivirMensaje();
-                Console.WriteLine("Uno: "+mensaje);
-                comandos();
-                Console.WriteLine("Dos: "+mensaje);
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            Environment.SetEnvironmentVariable("Path", @"C:\Program Files (x86)\swipl\bin");
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Jugar
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (jug == 1)
-            {
-                int dificultad;
-                string dif;
-                dif = comboBox_Dificultad.Text;
-                if (dif == "Facil")
-                    dificultad = 5;
-                else if (dif == "Medio")
-                    dificultad = 10;
-                else
-                    dificultad = 15;
-
-
-
-                Conecciones.enviar("habilitar2");
-
-                Conecciones.enviar(dificultad+"");
-
-                Juego juego = new Juego(dificultad);
-                juego.Show();
-                hilo.Abort();
-                this.Hide();
-                
-
-            }
-            else
-            {
-                Juego juego = new Juego(Int32.Parse(prueba.Text));
-                juego.Show();
-                hilo.Abort();
-                this.Hide();
-
-            }
-
-
-
-        }
-
-        //escribe en el label
+        //Pregunta por fue lo que se paso por el server para tomar acciones respectivas
         public void comandos()
         {
             prueba.Text = mensaje;
@@ -126,10 +63,74 @@ namespace Proyecto_III___v._0
             {
                 button_Jugar.Enabled = true;
             }
-
-
-            Console.WriteLine("Entró con la variable: " + mensaje);
         }
+
+        //Recive el mensaje del server
+        private void recivirMensaje1()
+        {
+            while (true)
+            {
+                mensaje = Conexiones.recivirMensaje();
+                comandos();
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Environment.SetEnvironmentVariable("Path", @"C:\\Program Files (x86)\\swipl\\bin");
+            string[] p = { "-q", "-f", @"Prolog\\niveles.pl"};
+            PlEngine.Initialize(p);
+        }
+
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //consulta la dificultad en un archivo de prolog
+        private int getDificultad()
+        {
+            PlQuery cargar = new PlQuery("cargar('niveles.pl')");
+            cargar.NextSolution();
+            PlQuery consulta1 = new PlQuery("dificultad(" + (comboBox_Dificultad.Text).ToLower() + ",Y)");
+            string var = "";
+            foreach (PlQueryVariables z in consulta1.SolutionVariables)
+                var = (z["Y"].ToString());
+
+            return Int32.Parse(var);
+        }
+
+        //Boton de jugar, consulta la dificultad y abre la otra ventana.
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (jug == 1)
+            {
+                int dificultad = getDificultad();
+
+                Conexiones.enviar("habilitar2");
+
+                Conexiones.enviar(dificultad+"");
+
+                Juego juego = new Juego(dificultad,jug);
+                juego.Show();
+                hilo.Abort();
+                this.Hide();
+                
+
+            }
+            else
+            {
+                Juego juego = new Juego(Int32.Parse(prueba.Text),jug);
+                juego.Show();
+                hilo.Abort();
+                this.Hide();
+
+            }
+
+        }
+
+       
 
         private void label3_Click(object sender, EventArgs e)
         {
